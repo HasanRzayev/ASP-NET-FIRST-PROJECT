@@ -39,7 +39,7 @@ namespace MyProfessionalASP.NETproject.Controllers
         {
             return View();
         }
-        public IActionResult Index()
+        public IActionResult index()
         {
             return View();
         }
