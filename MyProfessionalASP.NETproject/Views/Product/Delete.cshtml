@@ -1,0 +1,35 @@
+﻿
+
+
+
+
+
+
+<div style="text-align:center;">
+    <h1 >Delete</h1>
+
+  <form asp-action="Delete"  asp-controller="Product" method="post">
+         <input style="width:  200px" name="number" type="number"  placeholder="Enter Number" />
+         <input  style="width: 200px" value="remove"  type="submit" />
+ </form>
+<input  style="width: 820px" type="button" value="Menu" onclick="location.href='@Url.Action("Menu")'" />
+
+
+</div>
+
+
+<style>
+    body{
+    background:#023047;
+}
+   input[type=button]{
+        background:orange;
+        padding:20px;
+        margin-top:40px;
+    }
+ h1{
+        color:orange;
+        padding-top:150px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
