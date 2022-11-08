@@ -1,4 +1,7 @@
 ﻿@model List<Product>
+@{
+    int a = 1;
+}
 
 
 <div style="text-align:center;">
@@ -6,17 +9,22 @@
 
 <table class="zigzag" >
     <tr>
+        <th>Id</th>
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
     </tr>
         @foreach (var product in Model)
         {
-               <tr>
-                   <td text-align="center">@product.Name</td>
-                   <td text-align="center">@product.Description</td>
-                   <td text-align="center">@product.Price</td>
-               </tr> 
+                       <tr>
+                           <td text-align="center">@a</td>
+                           <td text-align="center">@product.Name</td>
+                           <td text-align="center">@product.Description</td>
+                           <td text-align="center">@product.Price</td>
+                @{
+                    a++;
+                }
+                       </tr> 
         }
 </table>
   

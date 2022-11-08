@@ -30,8 +30,8 @@ namespace MyProfessionalASP.NETproject.Controllers
         }
 
      
-        public IActionResult Delete() { 
-            return View(); 
+        public IActionResult Delete() {
+            return View(products);
         }
 
         [HttpGet]
@@ -47,11 +47,11 @@ namespace MyProfessionalASP.NETproject.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult Delete(int number)
         {
-            if(number>=0 && number<products.Count())
+            if(number-1>=0 && number-1<products.Count())
             {
 
                
-                products.RemoveAt(number);
+                products.RemoveAt(number-1);
             }
             return RedirectToAction("All");
         }
